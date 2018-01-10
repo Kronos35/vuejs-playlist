@@ -4,13 +4,25 @@
 	<meta charset="utf-8">
 	<title>VueJs Tutorials</title>
 	<script src='https://cdn.jsdelivr.net/npm/vue'></script>
-	<link rel="stylesheet" type="text/css" href=""/>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
 	<div id="vue-app">
 		<h1>{{greet()}}</h1>
 		<p>Name: {{ name }} </p>
 		<p>job: {{job}}</p>
+		<a v-bind:href="website">The karateka engineer</a>
+		<input type="text" name="" v-bind:value="job">
+		<p v-html='websiteTag'></p>
+	</div>
+	<div id="events-vue-app">
+		<h1>Events</h1>
+		<button v-on:click='add(1)'>Add a year</button>
+		<button @click='subtract(1)'>Substract a year</button>
+		<button v-on:dblclick='add(10)'>Add 10 years</button>
+		<button @dblclick='subtract(10)'>Substract 10 years</button>
+		<p>My age {{ age }} </p>
+		<div id="canvas" @mousemove="updateXY">({{x}}, {{y}})</div>
 	</div>
 	<script src="app.js"></script>
 </body>

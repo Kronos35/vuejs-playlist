@@ -2,7 +2,9 @@ new Vue({
 	el:'#vue-app',
 	data: {
 		name: 'Alvaro',
-		job: 'Karateka'
+		job: 'Karateka',
+		website: 'https://www.facebook.com/alvaro.forever.23',
+		websiteTag:'<a href="https://www.facebook.com/alvaro.forever.23">WebSite 2</a>'
 	},
 	methods:{
 		greet: function(){
@@ -18,6 +20,27 @@ new Vue({
 				greet+='morning '+this.name;
 			}
 			return greet
+		}
+	}
+});
+new Vue({
+	el:'#events-vue-app',
+	data: {
+		age:25,
+		x:0,
+		y:0
+
+	},
+	methods:{
+		add:function(amount){
+			this.age+=amount;
+		},
+		subtract:function(amount){
+			this.age-=amount;
+		},
+		updateXY:function(event){
+			this.x=event.offsetX;
+			this.y=event.offsetY;
 		}
 	}
 });
