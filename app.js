@@ -1,3 +1,18 @@
+//Keyboard events
+new Vue({
+	el:'#keyboardEvents',
+	data:{
+
+	},
+	methods:{
+		logName:function(){
+			console.log('you entered your name');
+		},
+		logAge:function(){
+			console.log('you entered your Age');
+		}
+	}
+})
 new Vue({
 	el:'#vue-app',
 	data: {
@@ -32,18 +47,20 @@ new Vue({
 
 	},
 	methods:{
+		//
 		add:function(amount){
 			this.age+=amount;
 		},
 		subtract:function(amount){
 			this.age-=amount;
 		},
+		//
 		updateXY:function(event){
 			this.x=event.offsetX;
 			this.y=event.offsetY;
 		},
 		click: function(){
 			alert('You clicked me');
-		}
+		},
 	}
 });
